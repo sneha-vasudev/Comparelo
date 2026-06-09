@@ -1,0 +1,303 @@
+# Comparelo – Multi-Platform Product Price Comparison System
+
+## Overview
+
+Comparelo is a web-based product comparison platform designed to simplify online shopping by allowing users to compare product prices from multiple retailers within a single interface.
+
+The system eliminates the need to manually browse multiple e-commerce websites by automatically retrieving product information from various retailers, processing the data, and presenting the most relevant comparison results to the user.
+
+The platform focuses on improving consumer decision-making through real-time price comparison, centralized product information, and direct redirection to retailer websites.
+
+---
+
+## Project Information
+
+**Project Type:** Full Stack Web Application
+
+**Institution:** VIT Bhopal University
+
+**Course:** DSN4098 – Project Exhibition
+
+**Team Members**
+
+- Sneha Vasudev
+- Palak Jain
+- Prerna Kumari
+- Prince Sahu
+- Divyanshu Pratap Singh
+- Vinit Kumar
+
+**Faculty Guide**
+
+Dr. Sukumar
+
+---
+
+## Problem Statement
+
+Consumers frequently switch between multiple e-commerce platforms such as Amazon, Flipkart, and Myntra to compare product prices and availability.
+
+This process is:
+
+- Time consuming
+- Repetitive
+- Inefficient
+- Prone to information overload
+
+Comparelo solves this challenge by providing a centralized comparison platform where users can compare products side-by-side and identify the best purchasing option quickly. :contentReference[oaicite:3]{index=3}
+
+---
+
+## Key Features
+
+### Product Search
+
+Users can search for products using a simple search interface.
+
+### Multi-Retailer Comparison
+
+Comparelo retrieves product information from:
+
+- Amazon
+- Flipkart
+- Myntra
+
+and displays them together for comparison. :contentReference[oaicite:4]{index=4}
+
+### Price Sorting
+
+Retrieved products are automatically sorted based on price to highlight the most economical option. :contentReference[oaicite:5]{index=5}
+
+### Retailer Redirection
+
+Users can directly navigate to the retailer's website to complete their purchase. :contentReference[oaicite:6]{index=6}
+
+### User Authentication
+
+The system includes login functionality to support authenticated user interactions. :contentReference[oaicite:7]{index=7}
+
+---
+
+## System Architecture
+
+```text
+User
+ │
+ ▼
+Search Product
+ │
+ ▼
+Data Collection Layer
+ │
+ ├── Amazon Scraper
+ ├── Flipkart Scraper
+ └── Myntra Integration
+ │
+ ▼
+Data Processing
+ │
+ ├── Filtering
+ ├── Normalization
+ └── Price Sorting
+ │
+ ▼
+Comparison Engine
+ │
+ ▼
+Result Display
+ │
+ ▼
+Retailer Redirection
+```
+
+---
+
+## Workflow
+
+### Phase 1: User Interaction
+
+- User visits website
+- User enters product details
+
+### Phase 2: Data Gathering
+
+- Query product information
+- Retrieve retailer data
+- Store product information
+
+### Phase 3: Data Processing
+
+- Normalize collected data
+- Filter results
+- Sort products by price
+
+### Phase 4: Comparison Display
+
+- Generate comparison results
+- Display retailer prices
+- Show product information
+
+### Phase 5: Purchase Redirection
+
+- User selects preferred retailer
+- System redirects user to retailer website
+
+This workflow was implemented based on the project architecture described in the technical documentation. :contentReference[oaicite:8]{index=8}
+
+---
+
+## Technology Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+
+- Python
+- Flask
+
+### Data Collection
+
+- Requests
+- BeautifulSoup4
+- Web Scraping
+
+### APIs and Integrations
+
+- Amazon Product Search
+- Flipkart Search
+- Myntra Integration
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+## Backend API Endpoints
+
+### Login
+
+```http
+POST /login
+```
+
+Authenticate users using email and password.
+
+### Compare Products
+
+```http
+POST /compare
+```
+
+Returns sorted product comparisons from multiple retailers.
+
+### Retailer Redirect
+
+```http
+POST /redirect
+```
+
+Redirects users to the selected retailer's website. :contentReference[oaicite:9]{index=9}
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Sneha-Vasudev/Comparelo.git
+cd Comparelo
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Application
+
+```bash
+python comparelo_backend.py
+```
+
+Server starts at:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+## Required Python Packages
+
+```text
+Flask
+Flask-CORS
+requests
+beautifulsoup4
+```
+
+Install using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Testing
+
+The following functionalities were tested:
+
+### Login Testing
+
+- Valid credentials
+- Invalid credentials
+
+### Product Search Testing
+
+- Valid product search
+- Empty search input
+
+### Price Comparison Testing
+
+- Product retrieval
+- Comparison generation
+
+### Retailer Redirection Testing
+
+- URL generation
+- External website redirection
+
+These test cases are documented in the project validation report. :contentReference[oaicite:10]{index=10}
+
+---
+
+## Future Enhancements
+
+- Real-time inventory tracking
+- Product recommendation engine
+- User review aggregation
+- Price history visualization
+- AI-powered buying recommendations
+- Additional retailer integrations
+
+---
+
+## Conclusion
+
+Comparelo provides a centralized solution for comparing products across multiple e-commerce platforms. By automating product retrieval, price comparison, and retailer redirection, the system reduces information overload and enables consumers to make faster and more informed purchasing decisions. 
+
+---
+
+## License
+
+This project is developed for academic and educational purposes under VIT Bhopal University.
+
